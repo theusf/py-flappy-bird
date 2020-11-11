@@ -1,10 +1,15 @@
 import pygame
 from pygame.locals import *
 
+
 class Bird(pygame.sprite.Sprite):
 
     def __init__(self):
-        """ Construtor da classe pai """
+        self.VELOCIDADE_INICIAL = 5
+        self.VELOCIDADE = 5
+        self.GRAVIDADE = 1
+
+        # Construtor da classe pai
         pygame.sprite.Sprite.__init__(self)
 
         self.sprites = [
@@ -33,3 +38,14 @@ class Bird(pygame.sprite.Sprite):
         self.sprite_atual = (self.sprite_atual + 1) % 3
 
         self.image = self.sprites[self.sprite_atual]
+
+        self.VELOCIDADE += self.GRAVIDADE
+
+        # Update da altura
+        self.rect[1] += self.VELOCIDADE
+
+    def pulo(self):
+        self.VELOCIDADE = -self.VELOCIDADE_INICIAL-5
+
+
+        
