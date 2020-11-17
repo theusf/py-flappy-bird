@@ -23,6 +23,9 @@ class Bird(pygame.sprite.Sprite):
         """ Convert alpha para deixar o transparente """
         self.image = pygame.image.load('assets/bluebird-upflap.png').convert_alpha()
 
+        """ Colocando Mask Collider """
+        self.mask = pygame.mask.from_surface(self.image)
+
         """ Criando o rect com base no tamanho da imagem"""
         self.rect = self.image.get_rect()
 
