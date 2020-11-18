@@ -3,7 +3,6 @@ from pygame.locals import *
 
 class Pipe(pygame.sprite.Sprite):
 
-
     def __init__(self, inverted,xpos, ysize, screen_height):
         self.VELOCIDADE = 5
         

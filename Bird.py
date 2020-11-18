@@ -6,7 +6,7 @@ class Bird(pygame.sprite.Sprite):
 
     def __init__(self):
         self.VELOCIDADE_INICIAL = 5
-        self.VELOCIDADE = 5
+        self.VELOCIDADE = 2
         self.GRAVIDADE = 1
 
         # Construtor da classe pai
